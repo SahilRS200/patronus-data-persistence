@@ -1,0 +1,26 @@
+{
+  "name": "patronus-data-persistence",
+  "version": "1.0.0",
+  "description": "Part of the patronus family. Listen to the events on a websocket and update mongodb with the same.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index",
+    "start-prod": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SahilRS200/patronus-data-persistence.git"
+  },
+  "author": "Sahil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SahilRS200/patronus-data-persistence/issues"
+  },
+  "homepage": "https://github.com/SahilRS200/patronus-data-persistence#readme",
+  "dependencies": {
+    "kue": "^0.11.6",
+    "mongoose": "^5.7.13",
+    "ws": "^7.2.0"
+  }
+}
