@@ -1,7 +1,7 @@
 var Cachedflight = require('../models/cachedflight');
 const devSession = 12345678;
-let freq = process.env['FREQUENCY'] || -20;
-freq = freq === 0 ? -20 : freq > 0 ? 0-freq : freq; 
+let freq = process.env['FREQUENCY'] || -3600;
+freq = freq === 0 ? -3600 : freq > 0 ? 0-freq : freq; 
 console.log(`setting frequency at ${freq}`)
 exports.handleRawData = function (data) {
     const { eml='dummy@dummy.com', v=2, session=12345678, id=0, time, ...rest } = data;
@@ -37,7 +37,7 @@ exports.handleRawData = function (data) {
           //  first: {$arrayElemAt: [ 'stamps', 0 ]} ,
           //  $max: { last: timestamp },
         },
-        { upsert: true }
+        { upsert: true, new:true }
     ).exec()
 
     promise

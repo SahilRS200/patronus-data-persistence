@@ -8,7 +8,10 @@ const onMessageCallback = function(msg) {
         const data = JSON.parse(payload);
         //console.log(data);
         require('./controllers/dataprocessor').handleRawData(data)
-    } else {
+    } else if(author === 'SYNC') {
+        
+    } 
+    else {
         console.log(`${type} | ${author}`)
     }
 }

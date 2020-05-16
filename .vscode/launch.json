@@ -1,0 +1,22 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\index.js",
+            "env" : {
+                "WS_URL": "ws://sahilsnest.in:8001/wsinit",
+                "MONGO_URL": "mongodb://cpldbuser:cpl_123@cpldb-shard-00-00-almj6.mongodb.net:27017,cpldb-shard-00-01-almj6.mongodb.net:27017,cpldb-shard-00-02-almj6.mongodb.net:27017/carpooldb?authSource=admin&replicaSet=cpldb-shard-0&ssl=true",
+                "FREQUENCY": "-3600",
+            }
+        }
+    ]
+}
