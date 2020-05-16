@@ -7,6 +7,10 @@ const onMessageCallback = function(msg) {
     if(author === 'OBD') {
         const data = JSON.parse(payload);
         //console.log(data);
+        if(data.sim) {
+            console.log('sim data skipping');
+            return;
+        }
         require('./controllers/dataprocessor').handleRawData(data)
     } else if(author === 'SYNC') {
         
